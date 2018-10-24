@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# parameters
+regex="^(build|ci|docs|feat|fix|perf|refactor|style|test)(\([a-z]+\))?: ([\_a-zA-Z0-9\W\s]+)"
+
+# process
+file=`cat $1`
+if ! [[ $file =~ $regex ]]; then
+  echo "ERROR - Commit message don't respect rules <type>(scope):<subject>."
+  exit 1
+else
+  echo "Commit message ok"
+fi
