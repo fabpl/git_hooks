@@ -1,6 +1,12 @@
 # GIT hooks
 Some usefull hooks for GIT
 
+## How to
+
+- Paste files into .git/hooks directory.
+- Remove extension file.
+- Enjoy!
+
 ## Hooks
 
 ### pre-commit: phpcs
